@@ -4,12 +4,34 @@
     <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+    <script src="https://kit.fontawesome.com/fc6df0fdb7.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav>
+        <div>
+          <a><span>Bookers</span></a>
+          <ul>
+            <% if user_signed_in? %>
+            <li>Home</li>
+            <li>Users</li>
+            <li>Books</li>
+            <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", home_about_path %></li>
+            <li><%= link_to "sign_up", new_user_registration_path %></li>
+            <li><%= link_to "login", new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
