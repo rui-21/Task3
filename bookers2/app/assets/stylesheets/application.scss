@@ -30,3 +30,16 @@ body{
   color: #212529;
   background-color: #fff;
 }
+
+#error_explanation{
+ color: red;
+}
+
+#error_explanation ul{
+ padding-left: 40px;
+}
+
+div.field,
+div.actions{
+ margin-bottom: 10px;
+}
