@@ -38,8 +38,14 @@
       </nav>
     </header>
     <main>
-      <p></p>
+      <p id="notice">
+        <% if flash[:notice] %>
+          <%= flash[:notice] %>
+        <% end %>
+      </p>
+
       <%= yield %>
+
     </main>
     <footer>
       <div class="container mt-5">

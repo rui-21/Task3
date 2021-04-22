@@ -30,13 +30,22 @@ body{
   color: #212529;
   background-color: #fff;
 }
-/* エラー用 */
+/*エラー用*/
 #error_explanation{
  color: red;
 }
 
 #error_explanation ul{
  padding-left: 40px;
+}
+
+/*サクセスメッセージ用*/
+#notice{
+ color: green;
+}
+
+#alert{
+ color: red;
 }
 
 div.field,
